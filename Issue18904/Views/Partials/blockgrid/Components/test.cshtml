@@ -1,0 +1,9 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem>
+@if (Model.Content is Test test)
+{
+    <img src="@test.Image?.Url()" alt="test" style="height: 300px;" />
+    <p>
+        @test.Text
+    </p>
+}
